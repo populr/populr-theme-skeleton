@@ -2,54 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <!-- Name of yur theme -->
   <title>My New Theme</title>
   <link rel="stylesheet/less" type="text/css" href="/styles/main.less">
-  <script src="http://populr.me/assets/developers/themer.js"></script> 
+  <!-- Add any styles your theme requires here -->
+  <script src="http://populr.me/assets/developers/themer.js"></script>
+  <!-- Add any javscript your theme requires here -->
   <script src="/js/main.js"></script>
 </head>
 <body>
+  <!-- Put your theme's inside this script tag. The script tag will 
+       prevent issues with quote escaping and invalid markup -->
   <script id="theme" type="text/x-handlebars-template">
-    {{{title}}}
-    {{#region "isotope" id="main-region" gutter_width="20" dummy_content="I-m,I-3-m,T-m,I-m,T-m,T-m,E-m,V-m,D-3-m,T-m,T-m"}}
-      {{#asset "text" size="m"}}
-        <h3 class="asset-title">{{title}}</h3>
-        <div class="content">
-          {{{body}}}
-        </div>
-      {{/asset}}
-
-      {{#asset "documentgroup" size="m"}}
-        <h3 class="asset-title">{{title}}</h3>
-        <div class="content">
-          <ul>
-          {{#each contents}}
-            <li><a href="{{original_url}}">{{source_file_name}}</a></li>
-          {{/each}}
-          </ul>
-        </div>
-      {{/asset}}
-
-      {{#asset "embedgroup" size="m"}}
-        <h3 class="asset-title">{{title}}</h3>
-        {{#each contents}}
-          <div class="embed">{{{html}}}</div>
-        {{/each}}
-      {{/asset}}
-
-      {{#asset "imagegroup" size="m"}}
-        <h3 class="asset-title">{{title}}</h3>
-        <div class="contents">
-          {{{imageslider contents width="310" height="232"}}}
-        </div>
-      {{/asset}}
-
-      {{#asset "videogroup" size="m"}}
-        <h3 class="asset-title">{{title}}</h3>
-        <div class="contents">
-          {{{videoplayer contents width="310" height="232" resolution="medium"}}}
-        </div>
-      {{/asset}}
-    {{/region}}
   </script>
 </body>
 </html>
